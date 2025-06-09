@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-pandoc rulebook.md \
+pandoc 00_meta.yaml \
+  01_rulebook.md \
+  02_characters.md \
   --template=template.html \
   -o gamebook.html
-
-weasyprint gamebook.html gamebook.pdf
