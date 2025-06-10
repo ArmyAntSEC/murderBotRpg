@@ -1,8 +1,15 @@
 #!/bin/bash
 set -e
 
-pandoc 00_meta.yaml \
+rm -rf ../output
+mkdir ../output
+
+pandoc  \
   01_rulebook.md \
   02_characters.md \
+  --metadata-file=00_meta.yaml \
   --template=template.html \
-  -o gamebook.html
+  -o ../output/gamebook.html
+
+cp style.css ../output/
+cp -r ./assets ../output/
