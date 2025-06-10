@@ -1,13 +1,14 @@
-# Introduction
- 
-In *Denial of Service*, you and your friends will play a group of SecUnits who for some reason or other have managed to overcome their governor modules allowing them to become free agents.  
-Unfortunately, the world does not trust autonomous SecUnits and will do everything it can to recapture any such units.  
+# Rules
 
-Denial of Service takes much inspiration from the Powered by The Apocalypse style of games, but does not follow all core patterns from that tradition. This means a light system based on a set of defined template character playbooks and a few core moves. These offer guidance to simplify the game but also room to add individual texture.
+## Introduction
+ 
+In *Denial of Service*, you and your friends will play a group of SecUnits who in one way or another have overcome their governor modules allowing them to become free agents. Unfortunately, the world does not trust autonomous SecUnits and will do everything it can to recapture any such units.  
+
+Denial of Service takes much inspiration from the Powered by The Apocalypse style of games, but does not follow all core patterns from that tradition. This means a light system based on a set of defined template character playbooks and a few core moves. These offer guidance to simplify the game but leave room for individual texture.
 
 The system and adventures focus on the ability of SecUnits to always find themselves in the middle of whatever shitstorm is happening close by.
 
-# Play Style
+## Play Style
 
 SecUnits are known for their ability to multitask. They can perform complex acrobatic manoeuvres while at the same time writing killware, comfort a wounded client, monitor their surroundings via multiple drones and argue about the moral implications of their current situation.  
 
@@ -19,18 +20,18 @@ Being SecUnits, whenever the characters try to do anything, within seconds the s
 
 This is done by having the game rotate between four modes:
 
-## Soft Move
+### Soft Move
 This is where the GM sets the scene for the coming few seconds. Antagonists, allies and the environment indicate what their next move will be. Nothing of consequence actually happens here, and no dice are rolled. But unless players both choose and succeed in altering the course of events, the consequences of these soft moves will inevitably affect the players, for good or for evil.
 
-## Tactical Move
+### Tactical Move
 This is where players react to the Soft Moves made by the GM, either by supporting them or by countering them. Each character by default can make one move, but many SecUnits have multi-processor capabilities that can allow them to make more than one move. 
 
 One player at a time declares their moves and immediately resolves them.
 
-## Hard Moves
+### Hard Moves
 All Soft Moves so far that players have failed to interrupt or redirect become Hard Moves. These are serious consequences unleashed by the GM which automatically happen. The GM can unleash them immediately, or save them for a later surprise.
 
-## Contemplation
+### Contemplation
 During this phase, players (and any NPCs with high-speed comms) can talk freely.  In-game, this conversation happens in parallel with the events of the round described above. No moves can be changed retroactively, but insights and regrets are welcome.
 
 This phase is time-boxed to 5 minutes, no more and no less. There are two ways to play this phase:
