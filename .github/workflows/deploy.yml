@@ -24,12 +24,13 @@ jobs:
 
       - name: Build HTML gamebook with Pandoc
         run: |
+          cd rulebook
           pandoc \
             01_rulebook.md \
             02_characters.md \
             --metadata-file=00_meta.yaml \
             --template=template.html \
-            -o output/gamebook.html
+            -o ../output/gamebook.html
 
       - name: Copy style and assets
         run: |
