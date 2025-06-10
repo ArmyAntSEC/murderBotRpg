@@ -1,0 +1,43 @@
+name: Build Gamebook
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install Pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Create output directory
+        run: |
+          rm -rf output
+          mkdir -p output
+
+      - name: Build HTML gamebook with Pandoc
+        run: |
+          pandoc \
+            01_rulebook.md \
+            02_characters.md \
+            --metadata-file=00_meta.yaml \
+            --template=template.html \
+            -o output/gamebook.html
+
+      - name: Copy style and assets
+        run: |
+          cp style.css output/
+          cp -r assets output/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gamebook
+          path: output/
