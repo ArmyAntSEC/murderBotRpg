@@ -1,58 +1,11 @@
 
 
-
-.main-content {
-  background: url('assets/background.png') repeat-y center top;
-  background-size: 100% auto;
+h1, h2, h3, div {
+  font-family: "Roboto Mono",  monospace;  
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "EB Garamond", serif;  
-  counter-reset: page;
+h1 {
+   @apply font-bold text-gray-900;
 }
 
-p, blockquote, h1, h2, h3 {
-  max-width: 14cm;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h1, h2, h3 {
-  font-family: "Roboto Mono",  monospace;
-  color: gray;
-  margin-top: 2em;
-}
-
-blockquote {
-  background: #fff8f0;
-  border-left: 4px solid #c08040;
-  padding: 1em;
-  font-style: italic;
-  break-inside: avoid;
-  margin: 2em auto;
-}
-
-.cover-page {
-  background-image: url('assets/cover.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  text-align: center;
-  color: #fff;
-  page-break-after: always;
-}
-
-.cover-text h1 {
-  font-size: 48pt;
-  margin-bottom: 0.5em;
-}
-
-.cover-text h2 {
-  font-size: 18pt;
-  margin-bottom: 3em;
-}
+ 
