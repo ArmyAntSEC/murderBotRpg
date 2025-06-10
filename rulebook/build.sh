@@ -5,9 +5,9 @@ rm -rf ../output
 mkdir ../output
 
 pandoc  \
+  00_intro.md \
   01_rulebook.md \
   02_characters.md \
-  --metadata-file=00_meta.yaml \
   --template=template.html \
   -o ../output/gamebook.html
 
