@@ -31,6 +31,9 @@ Select two typical behaviours from the list below, or provide your own:
 - Limited autonomy
 - Ruminations
 
+## Goals
+Define one short-term and one long-term goal based on your emotional state.
+
 ## Stats
 These are the basic stats that you will typically roll agains when making moves.
 
@@ -126,7 +129,7 @@ Your SecUnit is tough — but not indestructible. Damage comes in two tiers: **H
 
 - You have **7 health levels**.
 - Your body has **built-in armor** that **negates all 1-harm damage outright**.
-- At the **start of each round**, you **automatically repair 1-harm**.
+- At the **start of each round**, you **automatically heal 1 harm**.
 
 **When Health is Depleted:**
 - If you lose your **last health level**, you are **incapacitated for the rest of the combat**.
@@ -139,7 +142,7 @@ Your SecUnit is tough — but not indestructible. Damage comes in two tiers: **H
 If a **single attack deals more than 4-harm**, your systems **overload**:
 
 - You must **reboot**, missing your **next turn entirely**.
-- You still **regain 1-harm** during this reboot cycle.
+- You still **heal 1 harm** during this reboot cycle.
 
 ---
 
@@ -163,8 +166,9 @@ When you attempt to physically control, dismantle, or neutralize a threat or obs
   - Inflict additional harm  
   - Avoid retaliation or collateral  
   - Create an opening or advantage for an ally  
-- On a 7–9, choose 1 and suffer a complication:  
-  - Expose yourself to danger  
+- On a 7–9, choose 1 of the above and suffer a complication:  
+  - Are damaged in return
+  - Are hacked by your oponent
   - Cause unintended damage  
   - Only partially disable the threat  
 
@@ -179,7 +183,7 @@ When you scan your surroundings for tactical insight, threats, or exploitable pa
 - Roll +Sharp  
 - On a 10+, ask 3  
 - On a 7–9, ask 1  
-- Questions may include:  
+- Questions you may ask are:  
   - What is the biggest immediate threat?  
   - What here is useful or valuable?  
   - Where is the best escape route or entry point?  
@@ -190,7 +194,7 @@ When you scan your surroundings for tactical insight, threats, or exploitable pa
 ---
 
 ### Breach Protocol  
-When you interface with, override, or disrupt a digital system or automated process.  
+When you interface with, override, or disrupt a single automated process.  
 **Effect:**  
 
 - Roll +Tech
@@ -248,20 +252,21 @@ When you observe a human or augmented being in a stressful or ambiguous situatio
 ## Optional moves
 Please select two of the following addictional moves
 
-### Create Subroutine  
-Preload a custom behavior tree, tucked away until just the right moment.  
+### Write Malware
+Prepare malware targeted at a specific system to help you hack it. 
 **Effect:**  
-
-- Spend time (multiple rounds if complex) preparing a specific software action sequence
-- Activate it instantly at any later moment, bypassing timing constraints  
-- Only one subroutine can be active at a time  
+- A single malware can be stored at the time and each malware is single-use.
+- You may spend multiple rounds writing the software, and the results accumulate.
+- On a 10+, your malware will give you an additional +1 to Breech Protocol when you use it.
+- On a 7–9, your malware does not improve
+- On a miss, you realize a fundamental fault in your approach and have to start again from 0
 
 **Tag:** `[Prep] [Tactical]`
 
 ---
 
 ### Synthetic Rapport  
-Your empathy routines have been custom-trained on millions of human interactions. When you sustain conversation with someone for a few minutes (even under duress) by building trust,  or a convincing simulation of it.
+Your empathy routines have been custom-trained on millions of human interactions. When you sustain conversation with someone for a few minutes (even under duress) you can build trust, or a convincing simulation of it.
 
 **Effect:**  
 
@@ -279,17 +284,6 @@ Your empathy routines have been custom-trained on millions of human interactions
 
 ---
 
-### Overdrive  
-Divert power from non-essential systems and push your combat chassis past safety thresholds.  
-**Effect:**  
-
-- +1 ongoing to all Hostile Action rolls for the duration of the scene  
-- Mark 1 Stress (System) when activated  
-
-**Tag:** `[Boost] [Body] [Risk]`
-
----
-
 ### Ghost Entry  
 Slip past cameras, locks, and watchers like you were never there.  
 **Effect:**  
@@ -304,11 +298,14 @@ Slip past cameras, locks, and watchers like you were never there.
 ---
 
 ### Null Cascade  
-Once per scene, after a successful Breach Protocol, unleash a system-wide blackout — a one-time digital purge.  
+After a successful Breach Protocol, unleash a system-wide blackout.  
 **Effect:**  
 
-- Disable all affected systems (lighting, sensors, drones, etc.)  
-- Future attempts in the same environment face increased resistance or immunity  
+- Disables systems connected to the one you successfully breached.
+- On a 10+, your original target and two additional connected systems are shut down.  
+- On a 7–9, one connected system is shut down, but you lose access to the original breached system.  
+- On a miss, alarms are triggered, and you lose all access to the breached system.
+
 
 **Tag:** `[Hacking] [Disruption] [One-Use]`
 
@@ -318,10 +315,13 @@ Once per scene, after a successful Breach Protocol, unleash a system-wide blacko
 Emergency patchwork, diagnostics, and overrides to keep your allies functional when it matters most.  
 **Effect:**  
 
-- Choose: recover 1-harm. No roll needed.  
-- May be used during combat without penalty  
+- Roll: Tech
+- 10+: Ally recovers 1-harm. Everything holds stable.
+- 7–9: Ally recovers 1-harm, but you take 1-harm (that ignores armour).  
+- On a miss your equipment is degraded. You cannot use this move again in this scene.
+- Combat use: May be used during combat without penalty.
 
-**Tag:** `[Support] [Medical] [Quick]`
+**Tag:** `[Support] [Medical] [Combat]`
 
 ---
 
@@ -330,22 +330,11 @@ You can coordinate all your drones to act in unison during a Tactical or Combat 
 **Effect:**  
 
 - When making a Tactical move involving drones (e.g. Parse Environment, Hostile Action), you may treat all drones as a single coordinated unit.  
-- Resolve their actions with one roll.  
-- If successful, affected targets suffer -1 ongoing or another appropriate complication.  
+- 10+: Targets suffer -1 ongoing, are disoriented, or otherwise disadvantaged.
+- 7–9: They still suffer -1 ongoing, but one drone is lost.
+- On a miss the swarm misfires — drones act unpredictably or are countered.
 
 **Tag:** `[Passive] [Drones] [Tactical] [Swarm]`
-
----
-
-### Siege Mode  
-When you lock into position and fire a high-powered weapon you do extra damage.
-**Effect:**  
-
-- +1-harm damage  
-- Gains `[Armour-Piercing]` for the attack  
-- You become `[Immobile]` and vulnerable until your next turn  
-
-**Tag:** `[Heavy] [Weapon] [Risk]`
 
 ---
 
@@ -436,9 +425,19 @@ For when subtlety is overrated.
 
 
 ## Internal add-ons
-Select two of the following
+Select three of the following
 
 ---
+
+### Overdrive  
+Divert power from non-essential systems and push your combat chassis past safety thresholds.  
+**Effect:**  
+
+- +1 ongoing to all Hostile Action rolls while active
+- You do not heal while Overdrive is active
+
+**Tag:** `[Boost] [Body] [Risk]`
+
 
 ### Multithreaded Processing  
 Run multiple tasks or target streams at once.  
@@ -469,10 +468,9 @@ Gyro-corrected joints and muscle memory routines.
 Ceramic-carbide weave with shock-displacing matrix.  
 **Effect:**
 
-- Grants 1-armour at all times (stacks with cover)  
-- Looks like standard SecUnit flesh unless damaged  
+- Grants 1-armour at all times (stacks with cover and built-in armour)  
 
-**Tag:** `[Armour 1]`
+**Tag:** `[Armour]`
 
 ---
 
@@ -487,11 +485,23 @@ Field trauma system, stabilizers, wound-diagnosis overlay.
 
 ---
 
-### Omnidirectional Sensor Web  
-Short-range proximity field, vibration, and sound triangulation.  
+### Siege Mode  
+When you lock into position and fire a high-powered weapon you do extra damage.
 **Effect:**  
 
-- +1 to *Read a Charged Situation* in confined spaces or complex environments  
+- +1-harm damage  to ranged weapons
+- Range increased by one level for all ranged weapons
+- You become `[Immobile]` and vulnerable until your next turn  
+
+**Tag:** `[Heavy] [Weapon] [Risk]`
+
+---
+
+### Omnidirectional Sensor Web  
+Short-range proximity field, sound triangulation, and ground radar.  
+**Effect:**  
+
+- +1 to **Parse Environment** 
 - Can detect invisible or fast-moving threats nearby  
 - Justifies surprise mitigation or ambush avoidance  
 
