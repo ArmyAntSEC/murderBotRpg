@@ -30,7 +30,7 @@ jobs:
             02_characters.md \
             --metadata-file=00_meta.yaml \
             --template=template.html \
-            -o ../output/gamebook.html
+            -o ../output/index.html
 
       - name: Copy style and assets
         run: |
@@ -42,3 +42,19 @@ jobs:
         with:
           name: gamebook
           path: output/
+      
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip3 install awscli
+
+      - name: Sync to S3
+        run: |
+          aws s3 sync output/ s3://murderbot.armyr.se --delete
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
