@@ -28,13 +28,12 @@ body {
   background-image: url('./assets/Cover image.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
-  background-color: #3b82f6; /* fallback for bg-blue-500 */
+  background-position: center top;  
 }
 
 .text-section {
   background-color: black;
-  padding: 3rem; /* 12 * 0.25rem */
+  padding: 3rem; 
 }
 
 .text-column {
@@ -43,8 +42,8 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-  color: #6b7280; /* Tailwind's gray-500 */
-  gap: 2rem; /* space-y-8: 8 * 0.25rem = 2rem */
+  color: #6b7280;
+  gap: 2rem; 
 }
 
 .text-section h1 {
